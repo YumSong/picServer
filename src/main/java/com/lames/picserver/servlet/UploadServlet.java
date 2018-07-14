@@ -2,6 +2,7 @@ package com.lames.picserver.servlet;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Enumeration;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -26,10 +27,12 @@ public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		List<Part> parts = (List<Part>) request.getParts();
 		
 		String path = request.getServletContext().getRealPath("/");
 		JsonResult result = new JsonResult();
+		System.out.println(parts.size());
 		Part part = parts.get(0);
 		try {
 			String url = ImageUtil.saveImage(part.getInputStream(), path);

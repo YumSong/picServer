@@ -25,6 +25,7 @@ public class ImageUtil {
 		byte[] headerBuf = new byte[4];
 		is.read(headerBuf);
 		String type = FileUtil.getFileType(headerBuf);
+		System.out.println(type);
 		if(isImage(type)) {
 			String tempPath = destPath + "/temp/";
 			String tempFileFullName = tempPath + System.currentTimeMillis() + "";
