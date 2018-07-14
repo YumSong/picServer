@@ -20,7 +20,7 @@ public class FileUtil {
 	public static String getFileType(byte[] buf) {
 		String type = null;
 		String header;
-		for(int i=HEADER_MIN_SIZE; i<HEADER_MAX_SIZE && i<buf.length && type == null; ++i) {
+		for(int i=HEADER_MIN_SIZE; i<=HEADER_MAX_SIZE && i<=buf.length && type == null; ++i) {
 			header = bytesToHexString(buf,0,i);
 			type = realType.getProperty(header);
 		}
