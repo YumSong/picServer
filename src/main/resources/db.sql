@@ -17,7 +17,10 @@ merchantDetail_id number PRIMARY key
 ,idcard_pic NVARCHAR2(255)  --身份証圖片
 ,merchant_name NVARCHAR2(255)  --商家姓名
 ,shop_id number --店鋪id
-,status number --狀態：0-待處理、 1-審核通過（拉白）、 2-駁回 3、不同意（拉黑） 
+,status number --狀態：0-待處理、 1-審核通過（拉白）、 2-駁回 3、不同意（拉黑）
+,shop_pic NVARCHAR2(255) --店内圖片url拼接
+,business_pic NVARCHAR2(255) --工商照片
+,address NVARCHAR2(255)  --店鋪地址
 );
 create sequence S_merchantDetail
 minvalue 1
