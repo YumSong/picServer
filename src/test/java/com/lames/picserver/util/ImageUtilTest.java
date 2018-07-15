@@ -13,8 +13,8 @@ public class ImageUtilTest extends TestCase {
 
 	@Test
 	public void testSaveImage() throws IOException, NoSuchAlgorithmException {
-		String path = "D:\\My Pictures\\R.M.S.jpg";
+		/*String path = "D:\\My Pictures\\R.M.S.jpg";
 		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(path));
-		ImageUtil.saveImage(bis,"D:/image/real");
+		ImageUtil.saveImage(bis,"D:/image/real");*/
 	}
 }
